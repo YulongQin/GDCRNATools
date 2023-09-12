@@ -238,7 +238,7 @@ multiRegTestFun <- function(hyperOutput, rna.expr, mir.expr) {
 
 
 mirCorTestFun <- function(lncDa, pcDa, mir, mir.expr) {
-    if(mir %in% rownames(mir.expr)){
+    if(! mir %in% rownames(mir.expr)){
         return(c(0,0))
     }
     mirDa <- unlist(mir.expr[mir,])
